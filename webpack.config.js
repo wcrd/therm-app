@@ -4,12 +4,13 @@ const HtmlWebPackPlugin = require("html-webpack-plugin")
 
 module.exports = {
   entry: {
-    app: './src/app.js'
+    app: './src/app.js',
+    about: './src/about.js'
   },
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[name].js'
+    filename: '[name].bundle.js'
   },
   target: 'web',
   devtool: 'source-map',
@@ -48,7 +49,12 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/html/index.html",
       filename: "./index.html",
-      excludeChunks: [ 'server' ]
+      excludeChunks: [ 'server', 'about' ]
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/html/about.html",
+      filename: "./about.html",
+      excludeChunks: ['server', 'app']
     })
   ]
 }
