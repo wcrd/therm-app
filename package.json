@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist && webpack --mode development --config webpack.server.config.js && webpack --mode development",
-    "start": "nodemon ./dist/server.js"
+    "start": "nodemon ./dist/server.js",
+    "start-dev": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
     "style-loader": "^1.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0",
     "webpack-node-externals": "^1.7.2"
   }
 }
