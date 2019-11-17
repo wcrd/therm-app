@@ -5,7 +5,8 @@ const HtmlWebPackPlugin = require("html-webpack-plugin")
 module.exports = {
   entry: {
     app: './src/app.js',
-    about: './src/about.js'
+    about: './src/about.js',
+    theory: './src/theory.js'
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -49,12 +50,17 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/html/index.html",
       filename: "./index.html",
-      excludeChunks: [ 'server', 'about' ]
+      excludeChunks: [ 'server', 'about', 'theory' ]
     }),
     new HtmlWebPackPlugin({
       template: "./src/html/about.html",
       filename: "./about.html",
-      excludeChunks: ['server', 'app']
+      excludeChunks: ['server', 'app', 'theory']
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/html/theory.html",
+      filename: "./theory.html",
+      excludeChunks: ['server', 'app', 'about']
     })
   ]
 }

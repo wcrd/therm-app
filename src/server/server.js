@@ -4,7 +4,8 @@ import express from 'express'
 const app = express(),
             DIST_DIR = __dirname,
             APP_FILE = path.join(DIST_DIR, 'index.html'),
-            ABOUT_FILE = path.join(DIST_DIR, 'about.html')
+            ABOUT_FILE = path.join(DIST_DIR, 'about.html'),
+            THEORY_FILE = path.join(DIST_DIR, 'theory.html')
 
 app.use(express.static(DIST_DIR))
 
@@ -13,6 +14,9 @@ app.get('/', (req, res) => {
 })
 app.get('/about', (req, res) => {
     res.sendFile(ABOUT_FILE)
+})
+app.get('/theory', (req, res) => {
+    res.sendFile(THEORY_FILE)
 })
 
 const PORT = process.env.PORT || 8080
