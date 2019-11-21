@@ -7,8 +7,6 @@ const app = express(),
             ABOUT_FILE = path.join(DIST_DIR, 'about.html'),
             THEORY_FILE = path.join(DIST_DIR, 'theory.html')
 
-app.use(express.static(DIST_DIR))
-
 app.get('/', (req, res) => {
     res.sendFile(APP_FILE)
 })
