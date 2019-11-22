@@ -1,6 +1,8 @@
 const path = require("path")
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require("html-webpack-plugin")
+const MiniCSSWebPackPlugin = require("mini-css-extract-plugin")
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin")
 
 module.exports = {
   entry: {
@@ -14,9 +16,15 @@ module.exports = {
     filename: '[name].bundle.js'
   },
   target: 'web',
-  devtool: 'source-map',
-  devServer: {
-    contentBase: './dist'
+  //devtool: 'source-map',
+  optimization: {
+    minimizer: [
+      new UglifyJSPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true
+      })
+    ]
   },
   module: {
     rules: [
@@ -32,13 +40,13 @@ module.exports = {
         use: [
           {
             loader: "html-loader",
-            //options: { minimize: true }
+            options: { minimize: true }
           }
         ]
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: [ MiniCSSWebPackPlugin.loader, 'css-loader' ]
       },
       {
        test: /\.(png|svg|jpg|gif)$/,
@@ -49,18 +57,22 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/html/index.html",
-      filename: "./index.html",
-      excludeChunks: [ 'server', 'about', 'theory' ]
+      filename: "index.html",
+      chunks: [ 'app' ]
     }),
     new HtmlWebPackPlugin({
       template: "./src/html/about.html",
-      filename: "./about.html",
-      excludeChunks: ['server', 'app', 'theory']
+      filename: "about.html",
+      chunks: ['about']
     }),
     new HtmlWebPackPlugin({
       template: "./src/html/theory.html",
-      filename: "./theory.html",
-      excludeChunks: ['server', 'app', 'about']
+      filename: "theory.html",
+      chunks: ['theory']
+    }),
+    new MiniCSSWebPackPlugin({
+      filename: "[name].css",
+      chunkFilename: "[name].css"
     })
   ]
 }
