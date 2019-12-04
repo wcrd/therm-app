@@ -1590,7 +1590,9 @@ window.addEventListener('load', function () {
   _js_UI_js__WEBPACK_IMPORTED_MODULE_4__["default"].populateHistory();
 });
 window.addEventListener('resize', function () {
-  // Resize canvas
+  // Clear canvas
+  _js_Therm_js__WEBPACK_IMPORTED_MODULE_6__["default"].clearCharts(); // Resize canvas
+
   var canvas = document.querySelector('#canvas-construction');
   _js_Helpers_js__WEBPACK_IMPORTED_MODULE_5__["default"].fitToParentContainer(canvas); // draw default image
 
@@ -2824,8 +2826,8 @@ function () {
       ctx.fillStyle = "gray";
 
       if (window.innerWidth <= 768) {
-        ctx.fillText("to draw a construction enter material details", w / 2, h / 2 + 18 / 2);
-        ctx.fillText("in the input table or select from history below", w / 2, h / 2 - 18 / 2);
+        ctx.fillText("to draw a construction enter material details", w / 2, h / 2 - 18 / 2);
+        ctx.fillText("in the input table or select from history below", w / 2, h / 2 + 18 / 2);
       } else {
         ctx.fillText("to draw a construction enter material details in the input table or select from history below", w / 2, h / 2);
       }
