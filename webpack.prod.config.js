@@ -22,7 +22,7 @@ module.exports = {
       new UglifyJSPlugin({
         cache: true,
         parallel: true,
-        sourceMap: true
+        sourceMap: false
       })
     ]
   },
