@@ -302,7 +302,12 @@ export default class Therm {
         ctx.font = "18px Lato";
         ctx.textAlign = "center";
         ctx.fillStyle = "gray";
-        ctx.fillText("to draw a construction enter material details in the input table or select from history below", w/2, h/2);
+        if(window.innerWidth <= 768){
+            ctx.fillText("to draw a construction enter material details", w/2, h/2 - 18/2);
+            ctx.fillText("in the input table or select from history below", w/2, h/2 + 18/2);
+        }else{
+            ctx.fillText("to draw a construction enter material details in the input table or select from history below", w/2, h/2);
+        }
     }
 
     
