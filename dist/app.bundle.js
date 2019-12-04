@@ -2806,7 +2806,13 @@ function () {
       var ctx = canvas.getContext('2d'); // get canvas height and width
 
       var h = canvas.clientHeight;
+<<<<<<< HEAD
       var w = canvas.clientWidth; // set inlay offset
+=======
+      var w = canvas.clientWidth; // clear canvas content (if exists)
+
+      ctx.clearRect(0, 0, w, h); // set inlay offset
+>>>>>>> 1b01c20... Update Therm.js to clear native canvas elements on reset
 
       var offset = 5; // draw rectangle
 

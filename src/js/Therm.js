@@ -291,6 +291,8 @@ export default class Therm {
         // get canvas height and width
         const h = canvas.clientHeight;
         const w = canvas.clientWidth;
+        // clear canvas content (if exists)
+        ctx.clearRect(0,0,w,h);
         // set inlay offset
         const offset = 5;
         // draw rectangle
