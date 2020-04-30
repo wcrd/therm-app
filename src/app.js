@@ -1,3 +1,6 @@
+// bundle items for webpack
+import './css/app.css'
+
 // Import components
 import UI from './js/UI.js'
 import Helpers from './js/Helpers.js'
