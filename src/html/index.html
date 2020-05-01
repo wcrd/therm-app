@@ -27,13 +27,13 @@
                 <h4 class="d-inline text-info">v0.0.1</h4>
             </div>
             <div>
-                <a class="btn btn-primary btn-lg mb-2" href="./theory.html" role="button">Theory</a>
-                <a class="btn btn-primary btn-lg mb-2 ml-2" href="./about.html" role="button">About</a>
+                <a class="btn btn-primary mb-2" href="./theory.html" role="button">Theory</a>
+                <a class="btn btn-primary mb-2 ml-2" href="./about.html" role="button">About</a>
             </div>
         </div>
         <div id="app" class="mt-4 d-flex flex-column flex-grow-1">
-            <div class="d-flex mb-auto col flex-grow-1">
-                <div class="col-md-4 pl-0">
+            <div class="d-flex mb-auto row flex-grow-1">
+                <div class="col-xl-4 col-xs-12">
                     <h4 class="text-primary d-inline">Input</h4>
                     <div id="control-buttons" class="mb-2 text-right d-inline float-right">
                         <button type="button" id="calculate" class="btn btn-success">Calculate</button>
@@ -96,13 +96,13 @@
                             </tfoot>
                         </table>
                         <div>
-                            <button type="button" id="add-air-cavity" class="btn btn-primary btn-sm float-right">+ air cavity</button>
+                            <button type="button" id="add-air-cavity" class="btn btn-primary btn-sm float-right mb-2">+ air cavity</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 d-flex flex-column pr-0">
+                <div class="col-xl-8 col-xs-12 d-flex flex-column">
                     <div id="results-container" class="d-flex border border-info rounded">	
-                        <div id="construction-properties" class="d-flex col-md-2 flex-column p-2 border-right">
+                        <div id="construction-properties" class="d-flex col-md-3 flex-column p-2 border-right">
                             <div>
                                 <div class="text-info">Construction</div>
                                 <table class="table table-sm table-borderless results">
@@ -117,7 +117,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div id="surface-properties" class="d-flex col-md-2 flex-column p-2 border-right">
+                        <div id="surface-properties" class="d-flex col-md-3 flex-column p-2 border-right">
                             <div>
                                 <div class="text-info">Surface Resistance</div>
                                 <table class="table table-sm table-borderless results">
@@ -141,7 +141,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div id="total-properties" class="d-flex col-md-2 flex-column p-2 mr-auto border-right">
+                        <div id="total-properties" class="d-flex col-md-3 flex-column p-2 mr-auto border-right">
                             <div>
                                 <div class="text-info">Total</div>
                                 <table class="table table-sm table-borderless results">
@@ -185,9 +185,9 @@
                 </div>
             </div>
             <div class="row d-flex flex-end">
-                <div class="col-md-12 mb-2">
+                <div class="col-12 mb-2">
                     <h4 class="text-primary">History</h4>
-                    <div class="table constrain" style="min-height: 250px" id="history-div">
+                    <div class="table constrain border-top border-bottom" style="min-height: 250px" id="history-div">
                         <table class="table table-sm table-hover table-striped" id="history">
                             <thead class="table-primary">
                                 <tr>
