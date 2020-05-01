@@ -291,6 +291,8 @@ export default class Therm {
         // get canvas height and width
         const h = canvas.clientHeight;
         const w = canvas.clientWidth;
+        // clear canvas content (if exists)
+        ctx.clearRect(0,0,w,h);
         // set inlay offset
         const offset = 5;
         // draw rectangle
@@ -300,7 +302,12 @@ export default class Therm {
         ctx.font = "18px Lato";
         ctx.textAlign = "center";
         ctx.fillStyle = "gray";
-        ctx.fillText("to draw a construction enter material details in the input table or select from history below", w/2, h/2);
+        if(window.innerWidth <= 768){
+            ctx.fillText("to draw a construction enter material details", w/2, h/2 - 18/2);
+            ctx.fillText("in the input table or select from history below", w/2, h/2 + 18/2);
+        }else{
+            ctx.fillText("to draw a construction enter material details in the input table or select from history below", w/2, h/2);
+        }
     }
 
     

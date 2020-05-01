@@ -159,6 +159,8 @@ window.addEventListener('load', () => {
     UI.populateHistory();
 })
 window.addEventListener('resize', () => {
+    // Clear canvas
+    Therm.clearCharts();
     // Resize canvas
     const canvas = document.querySelector('#canvas-construction');
     Helpers.fitToParentContainer(canvas);
