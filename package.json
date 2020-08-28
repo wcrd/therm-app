@@ -1,28 +1,26 @@
 {
-  "name": "express-therm",
-  "version": "1.0.0",
-  "description": "complete website including the therm-app",
+  "name": "therm-app",
+  "version": "2.0.0",
+  "description": "Tool to help engineers, architects, and contractor calculate and visualise the thermal performance of custom constructions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "rm -rf dist && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
     "build:prod": "rm -rf dist && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
     "start": "nodemon ./dist/server.js",
-    "start:dev": "webpack-dev-server --open"
+    "start:dev": "webpack-dev-server --config webpack.dev.js --mode development"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wcrd/express-therm.git"
+    "url": ""
   },
   "author": "wcrd",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wcrd/express-therm/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/wcrd/express-therm#readme",
+  "homepage": "",
   "dependencies": {
     "@babel/runtime": "^7.6.3",
-    "express": "^4.17.1",
     "helmet": "^3.21.2"
   },
   "devDependencies": {
