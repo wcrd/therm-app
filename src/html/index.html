@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YY58NKQJ3P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YY58NKQJ3P');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="The Therm App Thermal Performance Calculator has been designed to help contractors, engineers, architects, and students anaylse and document the performance of different constructions for their projects">
+
+    <!-- Use bootstrap css for quick styling -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/landing-page.css">
+
+    <!-- Math formatting -->
+    <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <title>ThermApp</title>
+</head>
+<body>
+    <div class="container-fluid d-flex flex-column h-100">
+        <nav>
+            <div id="heading-block" class="d-flex justify-content-between align-items-baseline border-bottom">
+                <div>
+                    <h1 class="d-inline display-4">THERM App</h1>
+                    <h4 class="d-inline text-info">v0.0.1</h4>
+                </div>
+                <div>
+                    <a class="btn btn-primary mb-2" href="./theory.html" role="button">Theory</a>
+                    <a class="btn btn-primary mb-2 ml-2" href="./about.html" role="button">About</a>
+                </div>
+            </div>
+        </nav>
+        <section id="main-content" class="d-block">
+            <main class="d-block">
+                <header class="d-block">
+                    <h2 class="text-center">Quickly create and analyse custom constructions</h2>
+                    <div class="text-center">
+                        <a class="btn btn-lg btn-info text-center mt-4" href="./app.html">Launch App</a>
+                    </div>
+                </header>
+                <div class="d-flex row flex-grow-1" id="main-content-example">
+                    <div class="col col-xl-6 col-xs-12 text-center">
+                        <img src="../media/graph.png" class="border border-success rounded">
+                    </div>
+                    <div class="col col-xl-6 col-xs-12">
+                        <div class="card border-primary mb-3 mt-2 ml-4">
+                            <div class="card-header h4 bg-primary text-white">Calculated Construction Properties</div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <span class="mr-4">R<sub>construction</sub> &nbsp; = &nbsp; 0.011 \(K·m^2 \over W\)</span>
+                                    <span>U<sub>construction</sub> &nbsp; = &nbsp; 90.10 \(W \over K·m^2\)</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="mr-4">R<sub>surface, internal</sub> &nbsp; = &nbsp; 0.04 \(K·m^2 \over W\)</span>
+                                    <span>R<sub>surface, external</sub> &nbsp; = &nbsp; 0.13 \(K·m^2 \over W\)</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="mr-4">R<sub>total</sub> &nbsp; = &nbsp; 0.181 \(K·m^2 \over W\)</span>
+                                    <span>U<sub>total</sub> &nbsp; = &nbsp; 5.522 \(W \over K·m^2\)</span>
+                                </li>
+                                <li class="list-group-item disabled">
+                                    Layers
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="btn btn-primary btn-sm font-italic mr-2">Layer 1: Steel</span>
+                                    <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 0.005 \(K·m^2 \over W\),</span>
+                                    <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 0.005 &deg;C,</span>
+                                    <span>T<sub>inner</sub> &nbsp; = &nbsp; 0.005 &deg;C</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="btn btn-primary btn-sm font-italic mr-2">Layer 2: Wood</span>
+                                    <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 0.005 \(K·m^2 \over W\),</span>
+                                    <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 0.005 &deg;C,</span>
+                                    <span>T<sub>inner</sub> &nbsp; = &nbsp; 0.005 &deg;C</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="btn btn-primary btn-sm font-italic mr-2">Layer 3: Textile</span>
+                                    <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 0.005 \(K·m^2 \over W\),</span>
+                                    <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 0.005 &deg;C,</span>
+                                    <span>T<sub>inner</sub> &nbsp; = &nbsp; 0.005 &deg;C</span>
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-block mt-5">
+                    <header class="d-block">
+                        <h4 class="text-center">Closing statements</h4>
+                    </header>
+                </div>
+            </main>
+            
+        </section>
+    </div>
+</div>
+</body>
+</html>

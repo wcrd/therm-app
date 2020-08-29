@@ -2,18 +2,18 @@
 import './css/app.css'
 
 // Import components
-import UI from './js/UI.js'
-import Helpers from './js/Helpers.js'
-import Therm from './js/Therm.js'
-import Construction from './js/Construction.js'
-import Storage from './js/Storage.js'
+import UI from './js/components/UI.js'
+import Helpers from './js/components/Helpers.js'
+import Therm from './js/components/Therm.js'
+import Construction from './js/components/Construction.js'
+import Storage from './js/components/Storage.js'
 
 // register for dev only
-window.UI = UI;
-window.Therm = Therm;
-window.Construction = Construction;
-window.Storage = Storage;
-window.Helpers = Helpers;
+// window.UI = UI;
+// window.Therm = Therm;
+// window.Construction = Construction;
+// window.Storage = Storage;
+// window.Helpers = Helpers;
 
 
 

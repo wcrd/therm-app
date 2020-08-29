@@ -1,0 +1,16 @@
+section#main-content {
+    margin: 0 auto;
+    max-width: 90%;
+    min-width: 65%;
+    padding-top: 100px;
+}
+header {
+    margin-bottom: 100px;
+}
+#main-content-example {
+    height: 450px;
+}
+img {
+    object-fit: contain;
+    height: 450px;
+}
