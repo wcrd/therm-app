@@ -9,7 +9,7 @@
     "cleanUrls": true,
     "rewrites": [
       {
-        "source": "/app.html",
+        "source": "/index.html",
         "destination": "/"
       }
     ]

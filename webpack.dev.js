@@ -21,7 +21,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/html/app.html",
-      filename: "./app.html",
+      filename: "./index.html",
       chunks: [ 'app' ],
     }),
     new HtmlWebPackPlugin({

@@ -57,7 +57,7 @@ module.exports = {
             template: './src/html/app.html',
             inject: 'body',
             chunks: ['app'],
-            filename: 'app.html'
+            filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
             template: './src/html/about.html',
