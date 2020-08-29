@@ -4,9 +4,9 @@
   "description": "Tool to help engineers, architects, and contractor calculate and visualise the thermal performance of custom constructions",
   "main": "app.js",
   "scripts": {
-    "build:prod": "rm -rf dist && webpack --mode production --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js --mode production ",
     "start:dev": "webpack-dev-server --config webpack.dev.js --mode development",
-    "preview": "npm run build:prod && http-server dist"
+    "preview": "npm run build && http-server dist"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,7 @@
   },
   "homepage": "",
   "dependencies": {
-    "@babel/runtime": "^7.6.3",
-    "helmet": "^3.21.2"
+    "@babel/runtime": "^7.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -28,6 +27,7 @@
     "@babel/preset-env": "^7.6.3",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
     "eslint": "^6.7.0",
     "eslint-loader": "^3.0.2",
@@ -35,10 +35,12 @@
     "file-loader": "^4.2.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.12.3",
     "mini-css-extract-plugin": "^0.8.0",
     "nodemon": "^1.19.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "style-loader": "^1.0.0",
-    "uglifyjs-webpack-plugin": "^2.2.0",
+    "terser-webpack-plugin": "^4.1.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.9.0",

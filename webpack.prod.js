@@ -1,8 +1,10 @@
 const path = require("path")
 const webpack = require('webpack')
-const HtmlWebPackPlugin = require("html-webpack-plugin")
-const MiniCSSWebPackPlugin = require("mini-css-extract-plugin")
-const UglifyJSPlugin = require("uglifyjs-webpack-plugin")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const TerserPlugin = require("terser-webpack-plugin")
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 
 const buildPath = path.resolve(__dirname, 'dist')
 
@@ -50,6 +52,7 @@ module.exports = {
 
     // https://webpack.js.org/concepts/plugins/
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './src/html/app.html',
             inject: 'body',
@@ -82,7 +85,7 @@ module.exports = {
                 cache: true,
                 parallel: true,
                 sourceMap: false,
-                options: {
+                terserOptions: {
                     mangle: true,
                 }
             }),
