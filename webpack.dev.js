@@ -7,6 +7,7 @@ module.exports = {
     app: './src/app.js',
     about: './src/about.js',
     theory: './src/theory.js',
+    index: './src/index.js',
     // This is for development only
     dev_helpers: './src/js/dev_helpers/console_access_components.js'
   },
@@ -18,12 +19,18 @@ module.exports = {
       { test: /\.html$/, use: "html-loader" },
       { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader", options: { presets: ['@babel/preset-env'] } },
+      { test: /\.(png|svg|jpg|gif)$/, use: 'file-loader' }
     ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/html/app.html",
+      template: "./src/html/index.html",
       filename: "./index.html",
+      chunks: ['index'],
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/html/app.html",
+      filename: "./app.html",
       chunks: [ 'app', 'dev_helpers' ],
     }),
     new HtmlWebPackPlugin({

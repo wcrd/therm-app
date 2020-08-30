@@ -18,7 +18,8 @@ module.exports = {
     entry: {
         app: './src/app.js',
         about: './src/about.js',
-        theory: './src/theory.js'
+        theory: './src/theory.js',
+        index: './src/index.js'
     },
 
     // how to write the compiled files to disk
@@ -41,11 +42,19 @@ module.exports = {
                 }
             },
             {
+                test: /\.html$/,
+                use: 'html-loader'
+            },
+            {
                 test: /\.css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader"
                 ]
+            },
+            { 
+                test: /\.(png|svg|jpg|gif)$/, 
+                use: 'file-loader' 
             }
         ]
     },
@@ -54,10 +63,16 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
+            template: './src/html/index.html',
+            inject: 'body',
+            chunks: ['index'],
+            filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
             template: './src/html/app.html',
             inject: 'body',
             chunks: ['app'],
-            filename: 'index.html'
+            filename: 'app.html'
         }),
         new HtmlWebpackPlugin({
             template: './src/html/about.html',
