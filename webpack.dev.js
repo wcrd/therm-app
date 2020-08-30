@@ -1,6 +1,8 @@
-//const path = require("path")
+const path = require("path")
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require("html-webpack-plugin")
+
+const faviconPath = path.resolve(__dirname, 'src/media/icons/icons8-heating-50.png')
 
 module.exports = {
   entry: {
@@ -25,21 +27,25 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/html/index.html",
+      favicon: faviconPath,
       filename: "./index.html",
       chunks: ['index'],
     }),
     new HtmlWebPackPlugin({
       template: "./src/html/app.html",
+      favicon: faviconPath,
       filename: "./app.html",
       chunks: [ 'app', 'dev_helpers' ],
     }),
     new HtmlWebPackPlugin({
       template: "./src/html/about.html",
+      favicon: faviconPath,
       filename: "./about.html",
       chunks: ['about']
     }),
     new HtmlWebPackPlugin({
       template: "./src/html/theory.html",
+      favicon: faviconPath,
       filename: "./theory.html",
       chunks: ['theory']
     })

@@ -7,6 +7,7 @@ const TerserPlugin = require("terser-webpack-plugin")
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 
 const buildPath = path.resolve(__dirname, 'dist')
+const faviconPath = path.resolve(__dirname, 'src/media/icons/icons8-heating-50.png')
 
 module.exports = {
 
@@ -64,24 +65,28 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './src/html/index.html',
+            favicon: faviconPath,
             inject: 'body',
             chunks: ['index'],
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
             template: './src/html/app.html',
+            favicon: faviconPath,
             inject: 'body',
             chunks: ['app'],
             filename: 'app.html'
         }),
         new HtmlWebpackPlugin({
             template: './src/html/about.html',
+            favicon: faviconPath,
             inject: 'body',
             chunks: ['about'],
             filename: 'about.html'
         }),
         new HtmlWebpackPlugin({
             template: './src/html/theory.html',
+            favicon: faviconPath,
             inject: 'body',
             chunks: ['theory'],
             filename: 'theory.html'
