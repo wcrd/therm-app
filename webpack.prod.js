@@ -7,6 +7,7 @@ const TerserPlugin = require("terser-webpack-plugin")
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 
 const buildPath = path.resolve(__dirname, 'dist')
+const faviconPath = path.resolve(__dirname, 'src/media/icons/icons8-heating-50.png')
 
 module.exports = {
 
@@ -18,7 +19,8 @@ module.exports = {
     entry: {
         app: './src/app.js',
         about: './src/about.js',
-        theory: './src/theory.js'
+        theory: './src/theory.js',
+        index: './src/index.js'
     },
 
     // how to write the compiled files to disk
@@ -41,11 +43,19 @@ module.exports = {
                 }
             },
             {
+                test: /\.html$/,
+                use: 'html-loader'
+            },
+            {
                 test: /\.css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader"
                 ]
+            },
+            { 
+                test: /\.(png|svg|jpg|gif)$/, 
+                use: 'file-loader' 
             }
         ]
     },
@@ -54,19 +64,29 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: './src/html/app.html',
+            template: './src/html/index.html',
+            favicon: faviconPath,
             inject: 'body',
-            chunks: ['app'],
+            chunks: ['index'],
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
+            template: './src/html/app.html',
+            favicon: faviconPath,
+            inject: 'body',
+            chunks: ['app'],
+            filename: 'app.html'
+        }),
+        new HtmlWebpackPlugin({
             template: './src/html/about.html',
+            favicon: faviconPath,
             inject: 'body',
             chunks: ['about'],
             filename: 'about.html'
         }),
         new HtmlWebpackPlugin({
             template: './src/html/theory.html',
+            favicon: faviconPath,
             inject: 'body',
             chunks: ['theory'],
             filename: 'theory.html'

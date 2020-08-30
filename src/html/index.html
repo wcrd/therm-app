@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YY58NKQJ3P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YY58NKQJ3P');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Calculate the thermal performance of custom constructions and plot the results | Save, edit, and export results | Import custom constructions for analysis">
+    <meta name="keywords" content="thermal performance, u-value, r-value, thermal conductivity, thermal resistance, thermal transmittance, contructions, construction, architectural, engineer, esd">
+
+    <!-- Use bootstrap css for quick styling -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../css/landing-page.css"> -->
+
+    <!-- Math formatting -->
+    <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <title>ThermApp</title>
+</head>
+<body>
+    <main class="container-fluid h-100">
+        <nav>
+            <div id="heading-block" class="d-flex justify-content-between align-items-baseline border-bottom">
+                <div>
+                    <h1 class="d-inline display-4">THERM App</h1>
+                    <h4 class="d-inline text-info">v0.0.1</h4>
+                </div>
+                <div>
+                    <a class="btn btn-primary mb-2" href="./theory.html" role="button">Theory</a>
+                    <a class="btn btn-primary mb-2 ml-2" href="./about.html" role="button">About</a>
+                </div>
+            </div>
+        </nav>
+        <article id="main-content">
+            <section>
+                <header id="main-header" class="d-block">
+                    <h2 class="text-center">Quickly create and analyse custom constructions</h2>
+                    <div class="text-center">
+                        <a class="btn btn-lg btn-info text-center mt-4" href="./app.html">Launch App</a>
+                    </div>
+                    <hr class="mt-5">
+                </header>
+                <div class="d-block screen-fill">
+                    <div class="d-flex row flex-grow-1" id="main-content-example">
+                        <div class="col col-xl-6 col-12 text-center">
+                            <img id="main-chart" src="../media/graph_typical.png" class="border border-primary rounded">
+                        </div>
+                        <div class="col col-xl-6 col-12">
+                            <div class="card border-primary mb-3 ml-4">
+                                <div class="card-header h4 bg-primary text-white">Calculated Construction Properties</div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <span class="mr-4">R<sub>construction</sub> &nbsp; = &nbsp; 3.01 \(K·m^2 \over W\)</span>
+                                        <span>U<sub>construction</sub> &nbsp; = &nbsp; 0.33 \(W \over K·m^2\)</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="mr-4">R<sub>surface, internal</sub> &nbsp; = &nbsp; 0.04 \(K·m^2 \over W\)</span>
+                                        <span>R<sub>surface, external</sub> &nbsp; = &nbsp; 0.13 \(K·m^2 \over W\)</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="mr-4">R<sub>total</sub> &nbsp; = &nbsp; 3.18 \(K·m^2 \over W\)</span>
+                                        <span>U<sub>total</sub> &nbsp; = &nbsp; 0.31 \(W \over K·m^2\)</span>
+                                    </li>
+                                    <li class="list-group-item disabled">
+                                        Layers
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="btn btn-primary btn-sm font-italic mr-2">Layer 1: Render</span>
+                                        <small>
+                                            <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 0.013 \(K·m^2 \over W\),</span>
+                                            <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 35 &deg;C,</span>
+                                            <span>T<sub>inner</sub> &nbsp; = &nbsp; 34.95 &deg;C</span>
+                                        </small>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="btn btn-primary btn-sm font-italic mr-2">Layer 2: Brickwork</span>
+                                        <small>
+                                            <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 0.298 \(K·m^2 \over W\),</span>
+                                            <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 34.95 &deg;C,</span>
+                                            <span>T<sub>inner</sub> &nbsp; = &nbsp; 33.86 &deg;C</span>
+                                        </small>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="btn btn-primary btn-sm font-italic mr-2">Layer 3: Air Cavity</span>
+                                        <small>
+                                            <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 0.175 \(K·m^2 \over W\),</span>
+                                            <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 33.86 &deg;C,</span>
+                                            <span>T<sub>inner</sub> &nbsp; = &nbsp; 33.23 &deg;C</span>
+                                        </small>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="btn btn-primary btn-sm font-italic mr-2">Layer 4: Insulation</span>
+                                        <small>
+                                            <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 2.5 \(K·m^2 \over W\),</span>
+                                            <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 33.23 &deg;C,</span>
+                                            <span>T<sub>inner</sub> &nbsp; = &nbsp; 24.09 &deg;C</span>
+                                        </small>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="btn btn-primary btn-sm font-italic mr-2">Layer 5: Plaster</span>
+                                        <small>
+                                            <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 0.026 \(K·m^2 \over W\),</span>
+                                            <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 24.09 &deg;C,</span>
+                                            <span>T<sub>inner</sub> &nbsp; = &nbsp; 24 &deg;C</span>
+                                        </small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow">
+                    <header class="text-center pt-5">
+                        <a href="#features" class="h4">
+                            <i class="down-arrow border-info"></i>
+                        </a>
+                    </header>
+                </div>
+            </section>
+            <section id="features">
+                <div class="d-block pb-5">
+                    <p class=" lead text-center">
+                        <i>Therm App enables engineers, architects, and contractors to model and analyse custom constructions.</i><br>
+                        <i>Evaluate the thermal performance implications of materials, thickeness, air cavities, and ordering.</i>
+                    </p>
+                </div>
+                <hr class="pb-5">
+                <div id="features-grid" class="d-block screen-fill-partial">
+                    <!-- <div id="column-left" class="col-sm">
+                        <div class="feature mb-5">
+                            <h4>Drag & Drop builder</h4>
+                            <p>Details Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                        <div class="feature mb-5">
+                            <h4>Import & Export to CSV</h4>
+                            <p>Details Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                    </div>
+                    <div id="column-right" class="col-sm">
+                        <div class="feature mb-5">
+                            <h4>History & Library</h4>
+                            <p>Details Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                        <div class="feature mb-5">
+                            <h4>Temperature Plotting</h4>
+                            <p>Details Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                    </div> -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="feature mb-5 d-flex">
+                                <div class="mr-2">
+                                    <img src="..\media\icons\icons8-drag-and-drop-96.png"> 
+                                </div>
+                                <div class="pr-3">
+                                    <h4>Drag & Drop builder</h4>
+                                    <p>Easily create and re-order material layers in a drag and drop grid.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="feature mb-5 d-flex">
+                                <div class="mr-2">
+                                    <img src="..\media\icons\icons8-export-csv-128.png">
+                                </div>
+                                <div class="pr-3">
+                                    <h4>Import & Export to CSV</h4>
+                                    <p>
+                                        <span class="font-weight-bold text-success">Export</span> all created constructions to CSV for documentation or use in other software. 
+                                        <span class="font-weight-bold text-success">Import</span> saved constructions from CSV back into Therm App for visualisation and editing.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="feature mb-5 d-flex">
+                                <div class="mr-2">
+                                    <img src="..\media\icons\icons8-table-64.png">
+                                </div>
+                                <div class="pr-3">
+                                    <h4>History & Library</h4>
+                                    <p>
+                                        Previously created constructions are stored in the History table for re-use.
+                                        Constructions can be named, reloaded for editing or visualisation, or exported to CSV from the History table.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="feature mb-5 d-flex">
+                                <div class="mr-2">
+                                    <img src="..\media\icons\icons8-line-chart-64.png">
+                                </div>
+                                <div class="pr-3">
+                                    <h4>Temperature Plotting</h4>
+                                    <p>
+                                        Set internal and external temperature to view the temperature gradient through the construction.
+                                        Identify possible condensation issues within the constructions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+</div>
+</body>
+<footer>
+    <hr>
+    <div class="text-right text-muted pr-2">
+        <p>WCRD 2020</p>
+    </div>
+</footer>
+</html>

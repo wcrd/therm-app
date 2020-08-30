@@ -1,0 +1,55 @@
+article#main-content {
+    margin: 0 auto;
+    max-width: 65%;
+    min-width: 65%;
+    padding-top: 60px;
+}
+@media screen and (max-width: 1700px) {
+    article#main-content {
+        max-width: 90%;
+    }
+  }
+#main-header {
+    margin-bottom: 60px;
+}
+#main-content-example {
+    height: 450px;
+}
+img#main-chart {
+    object-fit: contain;
+    /* height: 450px; */
+    max-width: 100%;
+}
+#feature {
+    max-width: 10%;
+}
+#features-grid div.col {
+    max-width: 50%;
+}
+#features-grid img {
+    width: 96px;
+    height: 96px;
+}
+.screen-fill {
+    height: 1200px;
+}
+.screen-fill-partial {
+    height: 800px;
+}
+
+div.arrow {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -10px;
+    padding-bottom: 20px;
+}
+.down-arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}

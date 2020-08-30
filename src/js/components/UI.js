@@ -1,6 +1,7 @@
 import Storage from "./Storage.js";
 import Therm from "./Therm.js";
 import Construction from "./Construction.js";
+import Helpers from "./Helpers.js"
 
 // UI Class: Control on-screen rendering (except Canvas)
 export default class UI {
