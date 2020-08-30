@@ -25,6 +25,17 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
+    <!-- Math formatting -->
+    <script>
+        MathJax = {
+            options: {
+                enableMenu: false,
+            }
+        }
+    </script>
+    <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <title>Thermal Performance Calculator | ThermApp</title>
 </head>
 <body class="h-100">
@@ -54,8 +65,8 @@
                                 <tr>
                                     <th style="width: 5%"></th>
                                     <th style="width: 53%">Layer Name</th>
-                                    <th style="width: 15%">d [mm]</th>
-                                    <th style="width: 15%">k [W/mK]</th>
+                                    <th style="width: 15%">d <span class='font-weight-light'>\([mm]\)</span></th>
+                                    <th style="width: 15%">k <span class='font-weight-light'>\([{W \over mK}]\)</span></th>
                                     <th style="min-width: 6%" class="text-center align-middle text-success">+</th>
                                     <th style="min-width: 6%" class="text-center align-middle text-danger">x</th>
                                 </tr>
@@ -201,11 +212,11 @@
                                 <tr>
                                     <th scope="col" style="min-width:25%; width:35%">Name</th>
                                     <th scope="col" style="min-width:5%; width:10%">Layers</th>
-                                    <th scope="col" style="min-width:5%; width:10%">d [mm]</th>
-                                    <th scope="col" style="min-width:10%; width:10%">k [W/mK]</th>
-                                    <th scope="col" style="min-width:10%; width:10%">R layers [m2K/W]</th>
-                                    <th scope="col" style="min-width:10%; width:10%">U [W/m2K]</th>
-                                    <th scope="col" style="min-width:10%; width:10%">R [m2K/W]</th>
+                                    <th scope="col" style="min-width:5%; width:10%">d \([mm]\)</th>
+                                    <th scope="col" style="min-width:10%; width:10%">k \([{W \over mK}]\)</th>
+                                    <th scope="col" style="min-width:10%; width:10%">R layers \([{m^2 K \over W}]\)</th>
+                                    <th scope="col" style="min-width:10%; width:10%">U \([{W \over m^2 K}]\)</th>
+                                    <th scope="col" style="min-width:10%; width:10%">R \([{m^2 K \over W}]\)</th>
                                     <th scope="col" style="min-width:10%; width:5%"></th>
                                     <th scope="col" class="d-none" id="c_id"></th>
                                 </tr>
