@@ -1,16 +1,31 @@
-section#main-content {
+article#main-content {
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 65%;
     min-width: 65%;
-    padding-top: 100px;
+    padding-top: 60px;
 }
+@media screen and (max-width: 1700px) {
+    article#main-content {
+        max-width: 90%;
+    }
+  }
 header {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 #main-content-example {
     height: 450px;
 }
-img {
+img#main-chart {
     object-fit: contain;
     height: 450px;
+}
+#feature {
+    max-width: 10%;
+}
+#features-grid div.col {
+    max-width: 50%;
+}
+#features-grid img {
+    width: 96px;
+    height: 96px;
 }

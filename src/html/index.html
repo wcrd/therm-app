@@ -25,7 +25,7 @@
     <title>ThermApp</title>
 </head>
 <body>
-    <div class="container-fluid d-flex flex-column h-100">
+    <main class="container-fluid h-100">
         <nav>
             <div id="heading-block" class="d-flex justify-content-between align-items-baseline border-bottom">
                 <div>
@@ -38,19 +38,20 @@
                 </div>
             </div>
         </nav>
-        <section id="main-content" class="d-block">
-            <main class="d-block">
+        <article id="main-content">
+            <section>
                 <header class="d-block">
                     <h2 class="text-center">Quickly create and analyse custom constructions</h2>
                     <div class="text-center">
                         <a class="btn btn-lg btn-info text-center mt-4" href="./app.html">Launch App</a>
                     </div>
+                    <hr class="mt-5">
                 </header>
                 <div class="d-flex row flex-grow-1" id="main-content-example">
-                    <div class="col col-xl-6 col-xs-12 text-center">
-                        <img src="../media/graph.png" class="border border-success rounded">
+                    <div class="col col-xl-6 col-sm-12 text-center">
+                        <img id="main-chart" src="../media/graph.png" class="border border-primary rounded">
                     </div>
-                    <div class="col col-xl-6 col-xs-12">
+                    <div class="col col-xl-6 col-sm-12">
                         <div class="card border-primary mb-3 mt-2 ml-4">
                             <div class="card-header h4 bg-primary text-white">Calculated Construction Properties</div>
                             <ul class="list-group list-group-flush">
@@ -88,19 +89,111 @@
                                     <span>T<sub>inner</sub> &nbsp; = &nbsp; 0.005 &deg;C</span>
                                 </li>
                             </ul>
-                          </div>
                         </div>
                     </div>
                 </div>
-                <div class="d-block mt-5">
-                    <header class="d-block">
-                        <h4 class="text-center">Closing statements</h4>
+                <div>
+                    <header class="d-block pt-5">
+                        <h4 class="text-center">V</h4>
                     </header>
                 </div>
-            </main>
-            
-        </section>
-    </div>
+            </section>
+            <section>
+                <div class="d-block pb-5">
+                    <p class=" lead text-center">
+                        <i>Therm App enables engineers, architects, and contractors to model and analyse custom constructions.</i><br>
+                        <i>Evaluate the thermal performance implications of materials, thickeness, air cavities, and ordering.</i>
+                    </p>
+                </div>
+                <hr class="pb-5">
+                <div id="features-grid" class="d-block">
+                    <!-- <div id="column-left" class="col-sm">
+                        <div class="feature mb-5">
+                            <h4>Drag & Drop builder</h4>
+                            <p>Details Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                        <div class="feature mb-5">
+                            <h4>Import & Export to CSV</h4>
+                            <p>Details Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                    </div>
+                    <div id="column-right" class="col-sm">
+                        <div class="feature mb-5">
+                            <h4>History & Library</h4>
+                            <p>Details Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                        <div class="feature mb-5">
+                            <h4>Temperature Plotting</h4>
+                            <p>Details Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                    </div> -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="feature mb-5 d-flex">
+                                <div class="mr-2">
+                                    <img src="..\media\icons\icons8-drag-and-drop-96.png"> 
+                                </div>
+                                <div class="pr-3">
+                                    <h4>Drag & Drop builder</h4>
+                                    <p>Easily create and re-order material layers in a drag and drop grid.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="feature mb-5 d-flex">
+                                <div class="mr-2">
+                                    <img src="..\media\icons\icons8-export-csv-128.png">
+                                </div>
+                                <div class="pr-3">
+                                    <h4>Import & Export to CSV</h4>
+                                    <p>
+                                        <span class="font-weight-bold text-success">Export</span> all created constructions to CSV for documentation or use in other software. 
+                                        <span class="font-weight-bold text-success">Import</span> saved constructions from CSV back into Therm App for visualisation and editing.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="feature mb-5 d-flex">
+                                <div class="mr-2">
+                                    <img src="..\media\icons\icons8-table-64.png">
+                                </div>
+                                <div class="pr-3">
+                                    <h4>History & Library</h4>
+                                    <p>
+                                        Previously created constructions are stored in the History table for re-use.
+                                        Constructions can be named, reloaded for editing or visualisation, or exported to CSV from the History table.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="feature mb-5 d-flex">
+                                <div class="mr-2">
+                                    <img src="..\media\icons\icons8-line-chart-64.png">
+                                </div>
+                                <div class="pr-3">
+                                    <h4>Temperature Plotting</h4>
+                                    <p>
+                                        Set internal and external temperature to view the temperature gradient through the construction.
+                                        Identify possible condensation issues within the constructions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
 </div>
 </body>
+<footer>
+    <hr>
+    <div class="text-right text-muted pr-2">
+        <p>WCRD 2020</p>
+    </div>
+</footer>
 </html>
