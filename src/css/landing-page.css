@@ -9,7 +9,7 @@ article#main-content {
         max-width: 90%;
     }
   }
-header {
+#main-header {
     margin-bottom: 60px;
 }
 #main-content-example {
@@ -28,4 +28,16 @@ img#main-chart {
 #features-grid img {
     width: 96px;
     height: 96px;
+}
+.screen-fill {
+    height: 900px;
+}
+
+.arrow {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -20px;
+    padding-bottom: 10px;
 }

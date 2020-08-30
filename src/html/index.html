@@ -40,65 +40,67 @@
         </nav>
         <article id="main-content">
             <section>
-                <header class="d-block">
+                <header id="main-header" class="d-block">
                     <h2 class="text-center">Quickly create and analyse custom constructions</h2>
                     <div class="text-center">
                         <a class="btn btn-lg btn-info text-center mt-4" href="./app.html">Launch App</a>
                     </div>
                     <hr class="mt-5">
                 </header>
-                <div class="d-flex row flex-grow-1" id="main-content-example">
-                    <div class="col col-xl-6 col-sm-12 text-center">
-                        <img id="main-chart" src="../media/graph.png" class="border border-primary rounded">
-                    </div>
-                    <div class="col col-xl-6 col-sm-12">
-                        <div class="card border-primary mb-3 mt-2 ml-4">
-                            <div class="card-header h4 bg-primary text-white">Calculated Construction Properties</div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    <span class="mr-4">R<sub>construction</sub> &nbsp; = &nbsp; 0.011 \(K·m^2 \over W\)</span>
-                                    <span>U<sub>construction</sub> &nbsp; = &nbsp; 90.10 \(W \over K·m^2\)</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span class="mr-4">R<sub>surface, internal</sub> &nbsp; = &nbsp; 0.04 \(K·m^2 \over W\)</span>
-                                    <span>R<sub>surface, external</sub> &nbsp; = &nbsp; 0.13 \(K·m^2 \over W\)</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span class="mr-4">R<sub>total</sub> &nbsp; = &nbsp; 0.181 \(K·m^2 \over W\)</span>
-                                    <span>U<sub>total</sub> &nbsp; = &nbsp; 5.522 \(W \over K·m^2\)</span>
-                                </li>
-                                <li class="list-group-item disabled">
-                                    Layers
-                                </li>
-                                <li class="list-group-item">
-                                    <span class="btn btn-primary btn-sm font-italic mr-2">Layer 1: Steel</span>
-                                    <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 0.005 \(K·m^2 \over W\),</span>
-                                    <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 0.005 &deg;C,</span>
-                                    <span>T<sub>inner</sub> &nbsp; = &nbsp; 0.005 &deg;C</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span class="btn btn-primary btn-sm font-italic mr-2">Layer 2: Wood</span>
-                                    <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 0.005 \(K·m^2 \over W\),</span>
-                                    <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 0.005 &deg;C,</span>
-                                    <span>T<sub>inner</sub> &nbsp; = &nbsp; 0.005 &deg;C</span>
-                                </li>
-                                <li class="list-group-item">
-                                    <span class="btn btn-primary btn-sm font-italic mr-2">Layer 3: Textile</span>
-                                    <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 0.005 \(K·m^2 \over W\),</span>
-                                    <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 0.005 &deg;C,</span>
-                                    <span>T<sub>inner</sub> &nbsp; = &nbsp; 0.005 &deg;C</span>
-                                </li>
-                            </ul>
+                <div class="d-block screen-fill">
+                    <div class="d-flex row flex-grow-1" id="main-content-example">
+                        <div class="col col-xl-6 col-sm-12 text-center">
+                            <img id="main-chart" src="../media/graph.png" class="border border-primary rounded">
+                        </div>
+                        <div class="col col-xl-6 col-sm-12">
+                            <div class="card border-primary mb-3 mt-2 ml-4">
+                                <div class="card-header h4 bg-primary text-white">Calculated Construction Properties</div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <span class="mr-4">R<sub>construction</sub> &nbsp; = &nbsp; 0.011 \(K·m^2 \over W\)</span>
+                                        <span>U<sub>construction</sub> &nbsp; = &nbsp; 90.10 \(W \over K·m^2\)</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="mr-4">R<sub>surface, internal</sub> &nbsp; = &nbsp; 0.04 \(K·m^2 \over W\)</span>
+                                        <span>R<sub>surface, external</sub> &nbsp; = &nbsp; 0.13 \(K·m^2 \over W\)</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="mr-4">R<sub>total</sub> &nbsp; = &nbsp; 0.181 \(K·m^2 \over W\)</span>
+                                        <span>U<sub>total</sub> &nbsp; = &nbsp; 5.522 \(W \over K·m^2\)</span>
+                                    </li>
+                                    <li class="list-group-item disabled">
+                                        Layers
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="btn btn-primary btn-sm font-italic mr-2">Layer 1: Steel</span>
+                                        <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 0.005 \(K·m^2 \over W\),</span>
+                                        <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 0.005 &deg;C,</span>
+                                        <span>T<sub>inner</sub> &nbsp; = &nbsp; 0.005 &deg;C</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="btn btn-primary btn-sm font-italic mr-2">Layer 2: Wood</span>
+                                        <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 0.005 \(K·m^2 \over W\),</span>
+                                        <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 0.005 &deg;C,</span>
+                                        <span>T<sub>inner</sub> &nbsp; = &nbsp; 0.005 &deg;C</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="btn btn-primary btn-sm font-italic mr-2">Layer 3: Textile</span>
+                                        <span class="mr-2">R<sub>layer</sub> &nbsp; = &nbsp; 0.005 \(K·m^2 \over W\),</span>
+                                        <span class="mr-2">T<sub>outer</sub> &nbsp; = &nbsp; 0.005 &deg;C,</span>
+                                        <span>T<sub>inner</sub> &nbsp; = &nbsp; 0.005 &deg;C</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <header class="d-block pt-5">
-                        <h4 class="text-center">V</h4>
+                <div class="arrow">
+                    <header class="text-center pt-5">
+                        <a href="#features" class="h4">V</a>
                     </header>
                 </div>
             </section>
-            <section>
+            <section id="features">
                 <div class="d-block pb-5">
                     <p class=" lead text-center">
                         <i>Therm App enables engineers, architects, and contractors to model and analyse custom constructions.</i><br>
@@ -106,7 +108,7 @@
                     </p>
                 </div>
                 <hr class="pb-5">
-                <div id="features-grid" class="d-block">
+                <div id="features-grid" class="d-block screen-fill">
                     <!-- <div id="column-left" class="col-sm">
                         <div class="feature mb-5">
                             <h4>Drag & Drop builder</h4>
